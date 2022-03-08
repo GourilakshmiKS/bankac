@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block content %}
+    <form method="post" action="">
+        {% csrf_token %}
+        {% if msg %}
+        <p style="color:red"><b>{{msg}}</b></p>
+        {% endif %}
+
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="Enter username"><br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Enter password"><br>
+        <input type="submit" name="submit" value="Login">
+    </form>
+{% endblock %}

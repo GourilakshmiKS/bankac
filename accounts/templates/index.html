@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+{% block content %}
+    <h1>Bank Ac Details</h1>
+    <a href="{% url 'add' %}">Add Contact</a>
+    <a href="{% url 'logout' %}">Logout</a>
+
+    {% include 'list.html' %}
+    
+{% endblock %} 
